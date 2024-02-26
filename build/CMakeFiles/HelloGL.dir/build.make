@@ -73,29 +73,29 @@ CMakeFiles/HelloGL.dir/src/glad.c.o: CMakeFiles/HelloGL.dir/flags.make
 CMakeFiles/HelloGL.dir/src/glad.c.o: /Users/jaycehan/Project/Jayce/OpenGL/src/glad.c
 CMakeFiles/HelloGL.dir/src/glad.c.o: CMakeFiles/HelloGL.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jaycehan/Project/Jayce/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/HelloGL.dir/src/glad.c.o"
-	/Users/jaycehan/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/HelloGL.dir/src/glad.c.o -MF CMakeFiles/HelloGL.dir/src/glad.c.o.d -o CMakeFiles/HelloGL.dir/src/glad.c.o -c /Users/jaycehan/Project/Jayce/OpenGL/src/glad.c
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/HelloGL.dir/src/glad.c.o -MF CMakeFiles/HelloGL.dir/src/glad.c.o.d -o CMakeFiles/HelloGL.dir/src/glad.c.o -c /Users/jaycehan/Project/Jayce/OpenGL/src/glad.c
 
 CMakeFiles/HelloGL.dir/src/glad.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/HelloGL.dir/src/glad.c.i"
-	/Users/jaycehan/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jaycehan/Project/Jayce/OpenGL/src/glad.c > CMakeFiles/HelloGL.dir/src/glad.c.i
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jaycehan/Project/Jayce/OpenGL/src/glad.c > CMakeFiles/HelloGL.dir/src/glad.c.i
 
 CMakeFiles/HelloGL.dir/src/glad.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/HelloGL.dir/src/glad.c.s"
-	/Users/jaycehan/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jaycehan/Project/Jayce/OpenGL/src/glad.c -o CMakeFiles/HelloGL.dir/src/glad.c.s
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jaycehan/Project/Jayce/OpenGL/src/glad.c -o CMakeFiles/HelloGL.dir/src/glad.c.s
 
 CMakeFiles/HelloGL.dir/src/main.cpp.o: CMakeFiles/HelloGL.dir/flags.make
 CMakeFiles/HelloGL.dir/src/main.cpp.o: /Users/jaycehan/Project/Jayce/OpenGL/src/main.cpp
 CMakeFiles/HelloGL.dir/src/main.cpp.o: CMakeFiles/HelloGL.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jaycehan/Project/Jayce/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/HelloGL.dir/src/main.cpp.o"
-	/Users/jaycehan/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HelloGL.dir/src/main.cpp.o -MF CMakeFiles/HelloGL.dir/src/main.cpp.o.d -o CMakeFiles/HelloGL.dir/src/main.cpp.o -c /Users/jaycehan/Project/Jayce/OpenGL/src/main.cpp
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HelloGL.dir/src/main.cpp.o -MF CMakeFiles/HelloGL.dir/src/main.cpp.o.d -o CMakeFiles/HelloGL.dir/src/main.cpp.o -c /Users/jaycehan/Project/Jayce/OpenGL/src/main.cpp
 
 CMakeFiles/HelloGL.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/HelloGL.dir/src/main.cpp.i"
-	/Users/jaycehan/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jaycehan/Project/Jayce/OpenGL/src/main.cpp > CMakeFiles/HelloGL.dir/src/main.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jaycehan/Project/Jayce/OpenGL/src/main.cpp > CMakeFiles/HelloGL.dir/src/main.cpp.i
 
 CMakeFiles/HelloGL.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/HelloGL.dir/src/main.cpp.s"
-	/Users/jaycehan/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jaycehan/Project/Jayce/OpenGL/src/main.cpp -o CMakeFiles/HelloGL.dir/src/main.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jaycehan/Project/Jayce/OpenGL/src/main.cpp -o CMakeFiles/HelloGL.dir/src/main.cpp.s
 
 # Object files for target HelloGL
 HelloGL_OBJECTS = \

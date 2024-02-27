@@ -3,20 +3,7 @@
 #include <stdlib.h>
 #include "glad.h"
 #include "glfw3.h"
-
-const char *VertexShaderSource = "#version 330 core\n"
-"layout (location = 0) in vec3 position;\n"
-"void main()\n"
-"{\n"
-"gl_Position = vec4(position, 1.0);\n"
-"}\0";
-
-const char *FragmentShaderSource = "#version 330 core\n"
-"out vec4 FragColor;\n"
-"void main()\n"
-"{\n"
-"FragColor = vec4(1.0, 0.5, 0.2, 1.0);\n"
-"}\0";
+#include "Shader.hpp"
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
@@ -58,44 +45,8 @@ int main()
         return -1;
     }   
 
-    // 编译顶点着色器
-    const unsigned int vertexShader = glCreateShader(GL_VERTEX_SHADER);
-    glShaderSource(vertexShader, 1, &VertexShaderSource, NULL);
-    glCompileShader(vertexShader);
-    int success;
-    char infoLog[512];
-    glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &success);
-    if (!success) {
-        glGetShaderInfoLog(vertexShader, 512, NULL, infoLog);
-        std::cout << "[VertexShader] COMPILATION_FAILED\n" << infoLog << std::endl;
-        return -1;
-    }
-
-    // 编译片段着色器
-    const unsigned int fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
-    glShaderSource(fragmentShader, 1, &FragmentShaderSource, NULL);
-    glCompileShader(fragmentShader);
-    glGetShaderiv(fragmentShader, GL_COMPILE_STATUS, &success);
-    if (!success) {
-        glGetShaderInfoLog(fragmentShader, 512, NULL, infoLog);
-        std::cout << "[FragmentShader] COMPILATION_FAILED\n" << infoLog << std::endl;
-        return -1;
-    }
-
-    // 链接着色器程序
-    const unsigned int shaderProgram = glCreateProgram();
-    glAttachShader(shaderProgram, vertexShader);
-    glAttachShader(shaderProgram, fragmentShader);
-    glLinkProgram(shaderProgram);
-    glGetProgramiv(shaderProgram, GL_LINK_STATUS, &success);
-    if (!success) {
-        glGetProgramInfoLog(shaderProgram, 512, NULL, infoLog);
-        std::cout << "[ShaderProgram] LINK_FAILED\n" << infoLog << std::endl;
-        return -1;
-    }
-    glDeleteShader(vertexShader);
-    glDeleteShader(fragmentShader);
-
+    Shader shader("../src/Shaders/VertexShader.vs", "../src/Shaders/FragmentShader.fs");
+    shader.userProgram();
     // 设置窗户位置大小
     // 前两个参数控制窗口左下角位置；后两个参数表示渲染窗口的宽高，以像素为单位。
     glViewport(0, 0, 800, 600);
@@ -156,7 +107,8 @@ int main()
         // 清屏
         glClear(GL_COLOR_BUFFER_BIT);
         // 启用着色器程序
-        glUseProgram(shaderProgram);
+        // glUseProgram(shaderProgram);
+        shader.userProgram();
 
         glBindVertexArray(VAO);
 

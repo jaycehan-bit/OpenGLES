@@ -4,6 +4,9 @@
 
 class Shader
 {
+private:
+    void compileShaderProgram(const char *vertexCode, const char *fragmentCode);
+
 public:
     // 程序ID
     unsigned int ID;
@@ -11,7 +14,6 @@ public:
     // @param vertexPath 顶点着色器文件路径
     // @param fragmentPath 片段着色器文件路径
     Shader(const char *vertexPath, const char *fragmentPath);
-    ~Shader();
     void userProgram();
     void setBool(const std::string &name, bool value) const;
     void setInt(const std::string &name, int value) const;

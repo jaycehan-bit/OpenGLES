@@ -53,10 +53,15 @@ int main()
 
     // 定义顶点坐标
     const float vertices[] = {
-        -0.5, 0.5, 0.0, // 左上角
-        0.5, 0.5, 0.0,  // 右上角
-        0.5, -0.5, 0.0, // 右下角
-        -0.5, -0.5, 0.0, // 左下角
+        // 坐标              // 颜色
+        // 左上角
+        -0.5, 0.5, 0.0,     254/255.0, 67/255.0, 101/255.0,
+        // 右上角
+        0.5, 0.5, 0.0,      252/255.0, 157/255.0, 154/255.0,
+        // 右下角  
+        0.5, -0.5, 0.0,     249/255.0, 205/255.0, 173/255.0,
+        // 左下角
+        -0.5, -0.5, 0.0,    1.0,       245/255.0, 247/255.0,
     };
 
     const unsigned int indices[] = {
@@ -92,9 +97,12 @@ int main()
      * @param 4: 步长。告诉OpenGL在连续顶点属性组之间的间隔
      * @param 5: 位置数据在缓冲中起始位置的偏移量
     */
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void *)0);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void *)0);
     // 启用顶点属性
     glEnableVertexAttribArray(0);
+
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void *)(3 * sizeof(float)));
+    glEnableVertexAttribArray(1);
 
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0); 
@@ -117,7 +125,7 @@ int main()
          * @param 0: 应用到所有三角形的正反面
          * @param 1: 用线来绘制
         */
-        glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+        // glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
         // 设置会默认模式
         // glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
         /**

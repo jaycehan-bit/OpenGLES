@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/jaycehan/Project/Jayce/OpenGL/src/glad.c" "CMakeFiles/HelloGL.dir/src/glad.c.o" "gcc" "CMakeFiles/HelloGL.dir/src/glad.c.o.d"
+  "/Users/jaycehan/Project/Jayce/OpenGL/src/Shader.cpp" "CMakeFiles/HelloGL.dir/src/Shader.cpp.o" "gcc" "CMakeFiles/HelloGL.dir/src/Shader.cpp.o.d"
   "/Users/jaycehan/Project/Jayce/OpenGL/src/main.cpp" "CMakeFiles/HelloGL.dir/src/main.cpp.o" "gcc" "CMakeFiles/HelloGL.dir/src/main.cpp.o.d"
   )
 

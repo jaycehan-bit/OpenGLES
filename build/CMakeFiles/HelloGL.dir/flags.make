@@ -7,15 +7,15 @@ C_DEFINES =
 
 C_INCLUDES = -I/Users/jaycehan/Project/Jayce/OpenGL/include/glad -I/Users/jaycehan/Project/Jayce/OpenGL/include/GLFW -I/Users/jaycehan/Project/Jayce/OpenGL/include/KHR -I/Users/jaycehan/Project/Jayce/OpenGL/lib
 
-C_FLAGSarm64 =  -arch arm64 -isysroot /Users/jaycehan/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0
+C_FLAGSarm64 = -g -arch arm64 -isysroot /Users/jaycehan/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0
 
-C_FLAGS =  -arch arm64 -isysroot /Users/jaycehan/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0
+C_FLAGS = -g -arch arm64 -isysroot /Users/jaycehan/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0
 
 CXX_DEFINES = 
 
 CXX_INCLUDES = -I/Users/jaycehan/Project/Jayce/OpenGL/include/glad -I/Users/jaycehan/Project/Jayce/OpenGL/include/GLFW -I/Users/jaycehan/Project/Jayce/OpenGL/include/KHR -I/Users/jaycehan/Project/Jayce/OpenGL/lib
 
-CXX_FLAGSarm64 = -std=gnu++17 -arch arm64 -isysroot /Users/jaycehan/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0
+CXX_FLAGSarm64 = -g -std=gnu++17 -arch arm64 -isysroot /Users/jaycehan/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0
 
-CXX_FLAGS = -std=gnu++17 -arch arm64 -isysroot /Users/jaycehan/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0
+CXX_FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Users/jaycehan/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0
 

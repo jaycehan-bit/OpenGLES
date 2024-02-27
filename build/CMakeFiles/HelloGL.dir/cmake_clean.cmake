@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/HelloGL.dir/src/Shader.cpp.o"
+  "CMakeFiles/HelloGL.dir/src/Shader.cpp.o.d"
   "CMakeFiles/HelloGL.dir/src/glad.c.o"
   "CMakeFiles/HelloGL.dir/src/glad.c.o.d"
   "CMakeFiles/HelloGL.dir/src/main.cpp.o"

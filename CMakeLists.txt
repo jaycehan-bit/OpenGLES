@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0.0)
+cmake_minimum_required(VERSION 3.5)
 project(HelloGL VERSION 0.1.0)
 
 # 使用 C++ 17 标准
@@ -20,7 +20,7 @@ set(GLFW_A ${LIB_DIR}libglfw3.a)
 link_libraries(${GLFW_DYLIB} ${GLFW_A})
 
 # 执行编译命令
-set(SOURCES ${SRC_DIR}glad.c ${SRC_DIR}main.cpp)
+set(SOURCES ${SRC_DIR}glad.c ${SRC_DIR}main.cpp ${SRC_DIR}Shader.cpp)
 add_executable(HelloGL ${SOURCES})
 
 # 链接系统的 OpenGL 框架

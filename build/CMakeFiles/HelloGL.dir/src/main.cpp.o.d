@@ -734,4 +734,5 @@ CMakeFiles/HelloGL.dir/src/main.cpp.o: \
   /Users/jaycehan/Project/Jayce/OpenGL/include/glad/glad.h \
   /Users/jaycehan/Project/Jayce/OpenGL/include/KHR/khrplatform.h \
   /Users/jaycehan/Project/Jayce/OpenGL/include/GLFW/glfw3.h \
-  /Users/jaycehan/Project/Jayce/OpenGL/src/Shader.hpp
+  /Users/jaycehan/Project/Jayce/OpenGL/src/Shader.hpp \
+  /Users/jaycehan/Project/Jayce/OpenGL/src/stb_image.h

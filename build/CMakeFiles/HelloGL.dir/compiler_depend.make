@@ -1580,7 +1580,8 @@ CMakeFiles/HelloGL.dir/src/main.cpp.o: /Users/jaycehan/Project/Jayce/OpenGL/src/
   /Users/jaycehan/Project/Jayce/OpenGL/include/GLFW/glfw3.h \
   /Users/jaycehan/Project/Jayce/OpenGL/include/KHR/khrplatform.h \
   /Users/jaycehan/Project/Jayce/OpenGL/include/glad/glad.h \
-  /Users/jaycehan/Project/Jayce/OpenGL/src/Shader.hpp
+  /Users/jaycehan/Project/Jayce/OpenGL/src/Shader.hpp \
+  /Users/jaycehan/Project/Jayce/OpenGL/src/stb_image.h
 
 
 /Users/jaycehan/Project/Jayce/OpenGL/include/glad/glad.h:
@@ -1726,6 +1727,8 @@ CMakeFiles/HelloGL.dir/src/main.cpp.o: /Users/jaycehan/Project/Jayce/OpenGL/src/
 /Users/jaycehan/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/unordered_map:
 
 /Users/jaycehan/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/typeinfo:
+
+/Users/jaycehan/Project/Jayce/OpenGL/src/stb_image.h:
 
 /Users/jaycehan/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/type_traits:
 

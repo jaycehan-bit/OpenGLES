@@ -1,10 +1,15 @@
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string>
 #include "glad.h"
 #include "glfw3.h"
 #include "Shader.hpp"
+#define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
+
+GLFWwindow *initWindow();
+unsigned int generateTexture(const std::string imageName);
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
@@ -19,33 +24,7 @@ void processInput(GLFWwindow *window)
 
 int main()
 {   
-    // 初始化GLFW
-    glfwInit();
-    // 设置GLFW主次版本
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE); //MAC OSX needs
-
-    // 创建窗口对象
-    GLFWwindow *window = glfwCreateWindow(800, 600, "JayceHan", NULL, NULL);
-    if (window == NULL)
-    {
-        std::cout << "Failed to create GLFW window" << std::endl;
-        glfwTerminate();
-        return -1;
-    }
-    // 将窗口设置为当前线程的上下文
-    glfwMakeContextCurrent(window);
-    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
-
-    // 初始化GLAD（需要在调用OpenGL接口之前初始化）
-    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
-    {
-        std::cout << "Failed to initialize GLAD" << std::endl;
-        return -1;
-    }   
-
+    GLFWwindow *window = initWindow();
     Shader shader("../src/Shaders/VertexShader.vs", "../src/Shaders/FragmentShader.fs");
     shader.userProgram();
     // 设置窗户位置大小
@@ -69,6 +48,10 @@ int main()
         0, 1, 2,    // 第一个三角形顶点坐标
         0, 2, 3,    // 第二个三角形顶点坐标
     };
+
+    std::string imageName = "../src/Source/MissFortune.jpg";
+    const unsigned int texture = generateTexture(imageName);
+    std::cout << "texture: " << texture << std::endl;
 
     // 定义生成VAO
     unsigned int VAO;
@@ -151,12 +134,23 @@ int main()
     return 0;
 }
 
-unsigned int texture(char *imageName) {
+unsigned int generateTexture(const std::string imageName) 
+{
     int width, height, channels;
-    unsigned char *data = stbi_load(imageName, &width, &height, &channels, 0);
+    unsigned char *data = stbi_load(imageName.c_str(), &width, &height, &channels, 0);
+    if (data == NULL)
+    {
+        std::cout << "[Texture] Failed to load texture image: " << imageName << std::endl;
+        return 0;
+    }
+    
     unsigned int texture;
     glGenTextures(1, &texture);
     glBindTexture(GL_TEXTURE_2D, texture);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     /**
      * 使用图片数据生成纹理
      * @param 0: 纹理目标，和上边对应为2D
@@ -175,4 +169,35 @@ unsigned int texture(char *imageName) {
     stbi_image_free(data);
 
     return texture;
+}
+
+GLFWwindow *initWindow()
+{
+    // 初始化GLFW
+    glfwInit();
+    // 设置GLFW主次版本
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE); //MAC OSX needs
+
+    // 创建窗口对象
+    GLFWwindow *window = glfwCreateWindow(800, 600, "JayceHan", NULL, NULL);
+    if (window == NULL)
+    {
+        std::cout << "Failed to create GLFW window" << std::endl;
+        glfwTerminate();
+        return NULL;
+    }
+    // 将窗口设置为当前线程的上下文
+    glfwMakeContextCurrent(window);
+    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+
+    // 初始化GLAD（需要在调用OpenGL接口之前初始化）
+    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+    {
+        std::cout << "Failed to initialize GLAD" << std::endl;
+        return NULL;
+    }   
+    return window;
 }

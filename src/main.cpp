@@ -26,7 +26,7 @@ int main()
 {   
     GLFWwindow *window = initWindow();
     Shader shader("../src/Shaders/VertexShader.vs", "../src/Shaders/FragmentShader.fs");
-    shader.userProgram();
+    shader.useProgram();
     // 设置窗户位置大小
     // 前两个参数控制窗口左下角位置；后两个参数表示渲染窗口的宽高，以像素为单位。
     glViewport(0, 0, 800, 600);
@@ -52,6 +52,11 @@ int main()
     std::string imageName = "../src/Source/MissFortune.jpg";
     const unsigned int texture = generateTexture(imageName);
     std::cout << "texture: " << texture << std::endl;
+
+    std::string imageTwoName = "../src/Source/Sunset.jpg";
+    glActiveTexture(GL_TEXTURE1);
+    const unsigned int sunSetTexture = generateTexture(imageTwoName);
+    std::cout << "sunSetTexture: " << sunSetTexture << std::endl;
 
     // 定义生成VAO
     unsigned int VAO;
@@ -92,6 +97,15 @@ int main()
     glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void *)(6 * sizeof(float)));
     glEnableVertexAttribArray(2);
 
+    // 告诉OpenGL每个着色器采样器属于哪个纹理单元
+    // 给Uniform赋值前必须useProgram
+    shader.useProgram();
+    // glUniform1i(glGetUniformLocation(shader.ID, "texture1"), 0);
+    // glUniform1i(glGetUniformLocation(shader.ID, "texture2"), 1);
+    // 或者使用着色器类设置
+    shader.setInt("texture1", 0);
+    shader.setInt("texture2", 1);
+
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0); 
 
@@ -103,10 +117,11 @@ int main()
         // 清屏
         glClear(GL_COLOR_BUFFER_BIT);
         // 启用着色器程序
-        // glUseProgram(shaderProgram);
-        shader.userProgram();
-
+        shader.useProgram();
+        glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, texture);
+        glActiveTexture(GL_TEXTURE1);
+        glBindTexture(GL_TEXTURE_2D, sunSetTexture);
 
         glBindVertexArray(VAO);
 
@@ -175,6 +190,7 @@ unsigned int generateTexture(const std::string imageName)
     */
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
 
+    glBindTexture(GL_TEXTURE_2D, 0);
     // 生成完纹理后释放图片内存
     stbi_image_free(data);
 

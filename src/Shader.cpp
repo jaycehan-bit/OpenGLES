@@ -35,7 +35,7 @@ Shader::Shader(const char *vertexPath, const char *fragmentPath)
     this->compileShaderProgram(vertexCharCode, fragCharCode);
 }
 
-void Shader::userProgram()
+void Shader::useProgram()
 {
     glUseProgram(this->ID);
 }

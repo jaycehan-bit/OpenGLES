@@ -5,7 +5,7 @@
 # compile CXX with /usr/bin/clang++
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/jaycehan/Project/Jayce/OpenGL/include/glad -I/Users/jaycehan/Project/Jayce/OpenGL/include/GLFW -I/Users/jaycehan/Project/Jayce/OpenGL/include/KHR -I/Users/jaycehan/Project/Jayce/OpenGL/lib
+C_INCLUDES = -I/Users/jaycehan/Project/Jayce/OpenGL/include/glad -I/Users/jaycehan/Project/Jayce/OpenGL/include/GLFW -I/Users/jaycehan/Project/Jayce/OpenGL/include/KHR -I/Users/jaycehan/Project/Jayce/OpenGL/lib -I/Users/jaycehan/Project/Jayce/OpenGL/include/glm
 
 C_FLAGSarm64 = -g -arch arm64 -mmacosx-version-min=13.0
 
@@ -13,7 +13,7 @@ C_FLAGS = -g -arch arm64 -mmacosx-version-min=13.0
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/jaycehan/Project/Jayce/OpenGL/include/glad -I/Users/jaycehan/Project/Jayce/OpenGL/include/GLFW -I/Users/jaycehan/Project/Jayce/OpenGL/include/KHR -I/Users/jaycehan/Project/Jayce/OpenGL/lib
+CXX_INCLUDES = -I/Users/jaycehan/Project/Jayce/OpenGL/include/glad -I/Users/jaycehan/Project/Jayce/OpenGL/include/GLFW -I/Users/jaycehan/Project/Jayce/OpenGL/include/KHR -I/Users/jaycehan/Project/Jayce/OpenGL/lib -I/Users/jaycehan/Project/Jayce/OpenGL/include/glm
 
 CXX_FLAGSarm64 = -g -std=gnu++17 -arch arm64 -mmacosx-version-min=13.0
 

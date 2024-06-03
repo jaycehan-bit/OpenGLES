@@ -20,7 +20,7 @@ set(GLFW_A ${LIB_DIR}libglfw3.a)
 link_libraries(${GLFW_DYLIB} ${GLFW_A})
 
 # 执行编译命令
-set(SOURCES ${SRC_DIR}glad.c ${SRC_DIR}main.cpp ${SRC_DIR}Shader.cpp)
+set(SOURCES ${SRC_DIR}glad.c ${SRC_DIR}main.cpp ${SRC_DIR}Shader.cpp ${SRC_DIR}texture_builder.cpp)
 add_executable(HelloGL ${SOURCES})
 
 # 链接系统的 OpenGL 框架

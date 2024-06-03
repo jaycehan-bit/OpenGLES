@@ -1,3 +1,5 @@
+#include <cstdlib>
+#include <filesystem>
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
@@ -25,7 +27,9 @@ void processInput(GLFWwindow *window)
 int main()
 {   
     GLFWwindow *window = initWindow();
-    Shader shader("../src/Shaders/VertexShader.vs", "../src/Shaders/FragmentShader.fs");
+    const char *vertexShaderPath = "/Users/jaycehan/Project/Jayce/OpenGL/src/Shaders/VertexShader.vs";
+    const char *fragShaderPath = "/Users/jaycehan/Project/Jayce/OpenGL/src/Shaders/FragmentShader.fs";
+    Shader shader(vertexShaderPath, fragShaderPath);
     shader.useProgram();
     // 设置窗户位置大小
     // 前两个参数控制窗口左下角位置；后两个参数表示渲染窗口的宽高，以像素为单位。
@@ -49,11 +53,12 @@ int main()
         0, 2, 3,    // 第二个三角形顶点坐标
     };
 
-    std::string imageName = "../src/Source/MissFortune.jpg";
+    // TODO: 修改为相对路径
+    std::string imageName = "/Users/jaycehan/Project/Jayce/OpenGL/src/Source/MissFortune.jpg";
     const unsigned int texture = generateTexture(imageName);
     std::cout << "texture: " << texture << std::endl;
 
-    std::string imageTwoName = "../src/Source/Sunset.jpg";
+    std::string imageTwoName = "/Users/jaycehan/Project/Jayce/OpenGL/src/Source/Sunset.jpg";
     glActiveTexture(GL_TEXTURE1);
     const unsigned int sunSetTexture = generateTexture(imageTwoName);
     std::cout << "sunSetTexture: " << sunSetTexture << std::endl;

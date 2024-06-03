@@ -1,3 +1,10 @@
+#include <cstdio>
+#include <ios>
+#ifdef __APPLE__
+#define GL_SILENCE_DEPRECATION
+#endif
+#include <ostream>
+#include <stdexcept>
 #include <fstream>
 #include <iostream>
 #include <sstream>
@@ -16,6 +23,10 @@ Shader::Shader(const char *vertexPath, const char *fragmentPath)
     {
         vertexShaderFile.open(vertexPath);
         fragShaderFile.open(fragmentPath);
+        if (!vertexShaderFile.is_open() || !fragShaderFile.is_open())
+        {
+            throw std::invalid_argument("Could not open the file");
+        }
         std::stringstream vertexStream, fragmentStream;
         vertexStream << vertexShaderFile.rdbuf();
         fragmentStream << fragShaderFile.rdbuf();

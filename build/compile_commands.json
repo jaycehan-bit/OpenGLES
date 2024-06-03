@@ -1,19 +1,19 @@
 [
 {
   "directory": "/Users/jaycehan/Project/Jayce/OpenGL/build",
-  "command": "/usr/bin/clang  -I/Users/jaycehan/Project/Jayce/OpenGL/include/glad -I/Users/jaycehan/Project/Jayce/OpenGL/include/GLFW -I/Users/jaycehan/Project/Jayce/OpenGL/include/KHR -I/Users/jaycehan/Project/Jayce/OpenGL/lib -g -arch arm64 -isysroot /Users/jaycehan/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0 -o CMakeFiles/HelloGL.dir/src/glad.c.o -c /Users/jaycehan/Project/Jayce/OpenGL/src/glad.c",
+  "command": "/usr/bin/clang  -I/Users/jaycehan/Project/Jayce/OpenGL/include/glad -I/Users/jaycehan/Project/Jayce/OpenGL/include/GLFW -I/Users/jaycehan/Project/Jayce/OpenGL/include/KHR -I/Users/jaycehan/Project/Jayce/OpenGL/lib -g -arch arm64 -mmacosx-version-min=13.0 -o CMakeFiles/HelloGL.dir/src/glad.c.o -c /Users/jaycehan/Project/Jayce/OpenGL/src/glad.c",
   "file": "/Users/jaycehan/Project/Jayce/OpenGL/src/glad.c",
   "output": "CMakeFiles/HelloGL.dir/src/glad.c.o"
 },
 {
   "directory": "/Users/jaycehan/Project/Jayce/OpenGL/build",
-  "command": "/usr/bin/clang++  -I/Users/jaycehan/Project/Jayce/OpenGL/include/glad -I/Users/jaycehan/Project/Jayce/OpenGL/include/GLFW -I/Users/jaycehan/Project/Jayce/OpenGL/include/KHR -I/Users/jaycehan/Project/Jayce/OpenGL/lib -g -std=gnu++17 -arch arm64 -isysroot /Users/jaycehan/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0 -o CMakeFiles/HelloGL.dir/src/main.cpp.o -c /Users/jaycehan/Project/Jayce/OpenGL/src/main.cpp",
+  "command": "/usr/bin/clang++  -I/Users/jaycehan/Project/Jayce/OpenGL/include/glad -I/Users/jaycehan/Project/Jayce/OpenGL/include/GLFW -I/Users/jaycehan/Project/Jayce/OpenGL/include/KHR -I/Users/jaycehan/Project/Jayce/OpenGL/lib -g -std=gnu++17 -arch arm64 -mmacosx-version-min=13.0 -o CMakeFiles/HelloGL.dir/src/main.cpp.o -c /Users/jaycehan/Project/Jayce/OpenGL/src/main.cpp",
   "file": "/Users/jaycehan/Project/Jayce/OpenGL/src/main.cpp",
   "output": "CMakeFiles/HelloGL.dir/src/main.cpp.o"
 },
 {
   "directory": "/Users/jaycehan/Project/Jayce/OpenGL/build",
-  "command": "/usr/bin/clang++  -I/Users/jaycehan/Project/Jayce/OpenGL/include/glad -I/Users/jaycehan/Project/Jayce/OpenGL/include/GLFW -I/Users/jaycehan/Project/Jayce/OpenGL/include/KHR -I/Users/jaycehan/Project/Jayce/OpenGL/lib -g -std=gnu++17 -arch arm64 -isysroot /Users/jaycehan/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0 -o CMakeFiles/HelloGL.dir/src/Shader.cpp.o -c /Users/jaycehan/Project/Jayce/OpenGL/src/Shader.cpp",
+  "command": "/usr/bin/clang++  -I/Users/jaycehan/Project/Jayce/OpenGL/include/glad -I/Users/jaycehan/Project/Jayce/OpenGL/include/GLFW -I/Users/jaycehan/Project/Jayce/OpenGL/include/KHR -I/Users/jaycehan/Project/Jayce/OpenGL/lib -g -std=gnu++17 -arch arm64 -mmacosx-version-min=13.0 -o CMakeFiles/HelloGL.dir/src/Shader.cpp.o -c /Users/jaycehan/Project/Jayce/OpenGL/src/Shader.cpp",
   "file": "/Users/jaycehan/Project/Jayce/OpenGL/src/Shader.cpp",
   "output": "CMakeFiles/HelloGL.dir/src/Shader.cpp.o"
 }

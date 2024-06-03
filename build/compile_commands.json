@@ -16,5 +16,11 @@
   "command": "/usr/bin/clang++  -I/Users/jaycehan/Project/Jayce/OpenGL/include/glad -I/Users/jaycehan/Project/Jayce/OpenGL/include/GLFW -I/Users/jaycehan/Project/Jayce/OpenGL/include/KHR -I/Users/jaycehan/Project/Jayce/OpenGL/lib -I/Users/jaycehan/Project/Jayce/OpenGL/include/glm -g -std=gnu++17 -arch arm64 -mmacosx-version-min=13.0 -o CMakeFiles/HelloGL.dir/src/Shader.cpp.o -c /Users/jaycehan/Project/Jayce/OpenGL/src/Shader.cpp",
   "file": "/Users/jaycehan/Project/Jayce/OpenGL/src/Shader.cpp",
   "output": "CMakeFiles/HelloGL.dir/src/Shader.cpp.o"
+},
+{
+  "directory": "/Users/jaycehan/Project/Jayce/OpenGL/build",
+  "command": "/usr/bin/clang++  -I/Users/jaycehan/Project/Jayce/OpenGL/include/glad -I/Users/jaycehan/Project/Jayce/OpenGL/include/GLFW -I/Users/jaycehan/Project/Jayce/OpenGL/include/KHR -I/Users/jaycehan/Project/Jayce/OpenGL/lib -I/Users/jaycehan/Project/Jayce/OpenGL/include/glm -g -std=gnu++17 -arch arm64 -mmacosx-version-min=13.0 -o CMakeFiles/HelloGL.dir/src/texture_builder.cpp.o -c /Users/jaycehan/Project/Jayce/OpenGL/src/texture_builder.cpp",
+  "file": "/Users/jaycehan/Project/Jayce/OpenGL/src/texture_builder.cpp",
+  "output": "CMakeFiles/HelloGL.dir/src/texture_builder.cpp.o"
 }
 ]

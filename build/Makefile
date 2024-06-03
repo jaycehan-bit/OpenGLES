@@ -595,6 +595,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloGL.dir/build.make CMakeFiles/HelloGL.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/texture_builder.o: src/texture_builder.cpp.o
+.PHONY : src/texture_builder.o
+
+# target to build an object file
+src/texture_builder.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloGL.dir/build.make CMakeFiles/HelloGL.dir/src/texture_builder.cpp.o
+.PHONY : src/texture_builder.cpp.o
+
+src/texture_builder.i: src/texture_builder.cpp.i
+.PHONY : src/texture_builder.i
+
+# target to preprocess a source file
+src/texture_builder.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloGL.dir/build.make CMakeFiles/HelloGL.dir/src/texture_builder.cpp.i
+.PHONY : src/texture_builder.cpp.i
+
+src/texture_builder.s: src/texture_builder.cpp.s
+.PHONY : src/texture_builder.s
+
+# target to generate assembly for a file
+src/texture_builder.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloGL.dir/build.make CMakeFiles/HelloGL.dir/src/texture_builder.cpp.s
+.PHONY : src/texture_builder.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -644,6 +668,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/texture_builder.o"
+	@echo "... src/texture_builder.i"
+	@echo "... src/texture_builder.s"
 .PHONY : help
 
 

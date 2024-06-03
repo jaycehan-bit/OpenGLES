@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/HelloGL.dir/src/glad.c.o.d"
   "CMakeFiles/HelloGL.dir/src/main.cpp.o"
   "CMakeFiles/HelloGL.dir/src/main.cpp.o.d"
+  "CMakeFiles/HelloGL.dir/src/texture_builder.cpp.o"
+  "CMakeFiles/HelloGL.dir/src/texture_builder.cpp.o.d"
   "HelloGL"
   "HelloGL.pdb"
 )
